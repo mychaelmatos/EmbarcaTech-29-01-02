@@ -8,7 +8,7 @@ O projeto utiliza um microcontrolador para controlar LEDS RGB. Um botão é usad
 
 ## Estrutura do Projeto
 
-- `blink.c`: Contém a lógica principal para controlar o display de LEDs e tratar as interrupções dos botões.
+- `blink.c`: Contém a lógica principal do programa.
 - `diagram.json`: Arquivo json onde é usado para visualizar os testes com as funcionalidades do Wokwi
 - `CMakeLists.txt`: Arquivo de configuração do CMake para compilar o projeto.
 
