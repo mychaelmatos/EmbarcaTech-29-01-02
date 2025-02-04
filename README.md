@@ -1,4 +1,4 @@
-# Projeto WS2812
+# Projeto TAREFA 2 - Atividade 29/01
 
 Este projeto é uma tarefa da residência do CEPEDI de Sistemas Embarcados. Ele demonstra como controlar LEDs e um botão usando a Raspberry Pi Pico. O código faz com que três LEDs (azul, vermelho e verde) acendam simultaneamente quando o botão é pressionado e, em seguida, apaguem em sequência após um atraso. O projeto utiliza a placa BitDogLab e o simulador Wokwi para testar a funcionalidade durante o desenvolvimento.
 
