@@ -1,46 +1,39 @@
-Projeto - Tarefa 2
-Este projeto é a Tarefa 2 da atividade de residência de sistemas embarcados da CEPEDI. Ele demonstra como controlar LEDs e um botão usando a Raspberry Pi Pico. O código faz com que três LEDs (azul, vermelho e verde) acendam simultaneamente quando o botão é pressionado e, em seguida, apaguem em sequência após um atraso. O projeto utiliza a placa BitDogLab e o simulador Wokwi para testar a funcionalidade durante o desenvolvimento.
+# Projeto WS2812
 
-Estrutura do Projeto
-blink.c: Contém o código principal do projeto.
-CMakeLists.txt: Arquivo de configuração do CMake para compilar o projeto.
-pico_sdk_import.cmake: Arquivo para importar o SDK da Raspberry Pi Pico.
+Este projeto é uma tarefa da residência do CEPEDI de Sistemas Embarcados. Ele demonstra como controlar LEDs e um botão usando a Raspberry Pi Pico. O código faz com que três LEDs (azul, vermelho e verde) acendam simultaneamente quando o botão é pressionado e, em seguida, apaguem em sequência após um atraso. O projeto utiliza a placa BitDogLab e o simulador Wokwi para testar a funcionalidade durante o desenvolvimento.
 
-Funcionalidades
+## Descrição
 
-LEDs
-LED Azul: Conectado ao pino 12.
-LED Vermelho: Conectado ao pino 13.
-LED Verde: Conectado ao pino 11.
+O projeto utiliza um microcontrolador para controlar LEDS RGB. Um botão é usado para iniciar um evento de controlar os LEDS de acordo como pede a tarefa.
 
-Botão
-Botão: Conectado ao pino 5.
+## Estrutura do Projeto
 
-Constantes
-ATRASO_ALARME_MS: Define o atraso em milissegundos para o alarme (3000 ms).
-ATRASO_DEBOUNCE_MS: Define o atraso em milissegundos para o debounce do botão (50 ms).
-Simulação
-Para testar a funcionalidade do projeto durante o desenvolvimento, utilizamos a placa BitDogLab e o simulador Wokwi.
+- `blink.c`: Contém a lógica principal para controlar o display de LEDs e tratar as interrupções dos botões.
+- `diagram.json`: Arquivo json onde é usado para visualizar os testes com as funcionalidades do Wokwi
+- `CMakeLists.txt`: Arquivo de configuração do CMake para compilar o projeto.
 
-Compilação e Execução
-Para compilar e executar este projeto, siga os passos abaixo:
+## Funcionalidades
 
-Certifique-se de que o SDK da Raspberry Pi Pico está instalado.
-Crie um diretório de build e navegue até ele:
+- Acender três LEDs (azul, vermelho e verde) simultaneamente ao pressionar o botão.
+- Desligar os LEDs em sequência após um atraso.
+- Debouncing de 50 ms para evitar múltiplas leituras de um único pressionamento de botão.
 
-mkdir build
-cd build
+## Como usar o projeto
 
-Execute o CMake para gerar os arquivos de build:
+1. Clone o repositório.
+2. Importe o projeto com a extensão Raspberry Pi Pico.
+3. Coloque a placa BitDogLab no modo BOOTSEL, compile e rode o arquivo .c.
+4. Acesse o arquivo "diagram.json" e abrirá uma tela onde será simulado a placa, leds e o botão de acionamento. 
 
-Compile o projeto:
+## Requisitos
 
-cmake ..
+- Placa BitDogLab
+- Computador Pessoal
 
-Carregue o arquivo blink.uf2 gerado na Raspberry Pi Pico.
+## Licença
 
-Autor
-Mychael Matos
+Este projeto é licenciado sob a [MIT License](LICENSE).
 
-Licença
-Este projeto está licenciado sob a licença MIT.
+---
+
+Residência do CEPEDI de Sistemas Embarcados, Embarcatech.
